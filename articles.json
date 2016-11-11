@@ -1,0 +1,15 @@
+[{
+    "id": 1,
+    "title": "Some Article",
+    "author": {
+        "id": 1,
+        "name": "Dan"
+    }
+}, {
+    "id": 2,
+    "title": "Other Article",
+    "author": {
+        "id": 1,
+        "name": "Dan"
+    }
+}]
