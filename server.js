@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 
 //data api
-const data = require('./songs.json');
+const data = require('./mockdata/songs.json');
 
 app.get('/', function(req, res, next){
   res.json({
