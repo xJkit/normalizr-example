@@ -1,40 +1,40 @@
 const express = require('express');
-const path = require('path');
 const app = express();
 
-//data api
-const data = require('./mockdata/songs.json');
+//Schemas
+const flattenDataByArticles = require('./schemas/articles');
+const flattenDataByPosts = require('./schemas/posts');
 
+//json data
+const articles = require('./mockdata/articles.json');
+const posts = require('./mockdata/posts.json');
+
+//entry points
 app.get('/', function(req, res, next){
-  res.json({
-    id: "1",
-    title: "你，好不好？",
-    singers: "周興哲"
-  })
+  var resultHTML = '<h1>Welcome to the index page.<h1>';
+  resultHTML += '<p>For testing the api, please add your entry points on the server.js file.</p>';
+
+  res.send(resultHTML);
 })
 
-app.get('/data.json', function(req, res, next) {
-  res.json(data);
+//articles
+app.get('/articles', (req, res, next) => {
+  res.json(articles)
 })
 
-// use normalizr
-const normalizr = require('normalizr');
-const Schema = normalizr.Schema;
-const arrayOf = normalizr.arrayOf;
-const normalize = normalizr.normalize;
-//define a schema for entities
-const music = new Schema('musics', {idAttribute: '_id'});
-const composer = new Schema('composers', {idAttribute: '_id'});
-music.define({
-  singer: composer,
-  songs: arrayOf(composer)
+app.get('/n/articles', (req, res, next) => {
+  res.json(flattenDataByArticles(articles))
 })
 
-const dataN = normalize(data, music);
-
-app.get('/dataN.json', function(req, res, next) {
-  res.json(dataN);
+//posts
+app.get('/posts', (req, res, next) => {
+  res.json(posts);
 })
+
+app.get('/n/posts', (req, res) => {
+  res.json(flattenDataByPosts(posts));
+})
+
 
 app.listen(3000, function(){
   console.log('server listening on port 3000...');
