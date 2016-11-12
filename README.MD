@@ -179,3 +179,8 @@ Bob's your uncle! [__normalizr__](https://github.com/paularmstrong/normalizr) ma
 Then you go! Feel free to append your fake data in the __./mockdata__ folder, and don't forget to add an entry point of the api server for that data.
 
 If you still have questions, it's easy to contact with me: [xjkit54780@gmail.com] (mailto:xjkit54780@gmail.com). Feel free, of course!
+
+## Credits
+
+Normalizr was originally created by [Dan Abramov](http://github.com/gaearon) and inspired by a conversation with [Jing Chen](https://twitter.com/jingc).  
+It has since received contributions from different [community members](https://github.com/gaearon/normalizr/graphs/contributors).
