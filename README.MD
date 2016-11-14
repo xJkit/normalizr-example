@@ -15,7 +15,7 @@ To fire up server, use __nodemon__:
 npm start
 ```
 
-By adding custom json file and entry point, you can see the response data magically to be flat through the customized schemas. [__normalizr__](https://github.com/paularmstrong/normalizr) are quite suitable for deeply structured json. It's very convenient to pull out the goal data.
+By adding custom json files and entry points, you can see the response data magically being flat through the customized schemas. [__normalizr__](https://github.com/paularmstrong/normalizr) are quite suitable for deeply structured or nested json. It's very convenient to pull out the goal data.
 
 ## Example: the complicated posts json
 The posts.json file structure looks like this:
