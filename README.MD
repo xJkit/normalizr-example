@@ -6,13 +6,13 @@ Different JSON data:
 
 Use __``express.js``__ as backend server to respond json data object. Use [__``normalizr``__](https://github.com/paularmstrong/normalizr) to make them flat.
 
-To kick off, install node packages by __npm__:
+To kick off, install node packages by __yarn__:
 ```
-npm i
+yarn
 ```
 To fire up server, use __nodemon__:
 ```
-npm start
+yarn start
 ```
 
 By adding custom json files and entry points, you can see the response data magically being flat through the customized schemas. [__normalizr__](https://github.com/paularmstrong/normalizr) are quite suitable for deeply structured or nested json. It's very convenient to pull out the goal data.
@@ -173,7 +173,7 @@ __arrayOf__ is meant to the data wrapped in an array. Thus. the json data would 
 }
 ```
 
-Bob's your uncle! [__normalizr__](https://github.com/paularmstrong/normalizr) magically flatten the deeply structured json file. You can easily process the data afterwards, and it's fantastic.
+Voila! [__normalizr__](https://github.com/paularmstrong/normalizr) magically flatten the deeply structured json file. You can easily process the data afterwards, and it's fantastic.
 
 ---
 Then you go! Feel free to append your fake data in the __./mockdata__ folder, and don't forget to add an entry point of the api server for that data.
